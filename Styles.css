@@ -1,0 +1,55 @@
+/* Aplicar la tipografía Matrix */
+body {
+    background-color: black;
+    color: #00FF00; /* Verde estilo Matrix */
+    font-family: 'Share Tech Mono', monospace; /* Tipografía estilo Matrix */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo para los contenedores tipo terminal */
+.terminal {
+    border: 2px solid #00FF00; /* Bordes verdes */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: black; /* Fondo negro */
+}
+
+/* Efecto de texto de comando */
+.command-line {
+    font-size: 18px;
+}
+
+/* Estilo para el cursor parpadeante */
+.blinking-cursor {
+    animation: blink 1s steps(1) infinite;
+}
+
+/* Animación para el cursor */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Estilo para el título */
+.title {
+    font-size: 28px;
+    color: #00FF00;
+    text-align: center;
+}
+
+/* Contenedor de la imagen y el texto */
+.about-container {
+    display: flex; /* Para alinear la imagen y el texto en fila */
+    align-items: center; /* Para alinear verticalmente */
+}
+
+/* Estilos para la imagen */
+.about-image {
+    border: 2px solid #00FF00; /* Borde verde */
+    width: 150px; /* Ajusta el tamaño según tu imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
