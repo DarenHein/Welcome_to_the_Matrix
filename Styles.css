@@ -40,10 +40,11 @@ body {
     text-align: center;
 }
 
-/* Contenedor de la imagen y el texto */
 .about-container {
-    display: flex; /* Para alinear la imagen y el texto en fila */
-    align-items: center; /* Para alinear verticalmente */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar texto */
 }
 
 /* Estilos para la imagen */
