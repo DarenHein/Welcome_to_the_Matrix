@@ -4,7 +4,23 @@ body {
     color: #00FF00; /* Verde estilo Matrix */
     font-family: 'Share Tech Mono', monospace; /* Tipografía estilo Matrix */
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Elimina padding extra en el body */
+    height: 100vh; /* Asegura que el body ocupe el 100% de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el encabezado que ocupa toda la pantalla */
+#Titulo_central {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    background-color: black; /* Fondo negro */
+    border: none; /* Sin borde */
+    text-align: center; /* Centrar el texto */
 }
 
 /* Estilo para los contenedores tipo terminal */
@@ -35,11 +51,12 @@ body {
 
 /* Estilo para el título */
 .title {
-    font-size: 28px;
+    font-size: 48px; /* Tamaño más grande para el encabezado */
     color: #00FF00;
     text-align: center;
 }
 
+/* Contenedor para la sección About */
 .about-container {
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
@@ -53,4 +70,31 @@ body {
     width: 150px; /* Ajusta el tamaño según tu imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: black;
+    border-top: 2px solid #00FF00; /* Borde verde superior */
+    color: #00FF00; /* Texto verde */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Share Tech Mono', monospace; /* Mantiene la tipografía Matrix */
+}
+
+/* Estilo para el nickname */
+.nickname {
+    font-weight: bold;
+}
+
+/* Estilo para el correo electrónico */
+.email {
+    color: #00FF00; /* Enlace en color verde */
+    text-decoration: none; /* Sin subrayado en el enlace */
+}
+
+/* Efecto hover para el correo electrónico */
+.email:hover {
+    text-decoration: underline; /* Subrayado cuando el usuario pasa el mouse */
 }
