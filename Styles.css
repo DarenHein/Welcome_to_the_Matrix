@@ -98,3 +98,33 @@ body {
 .email:hover {
     text-decoration: underline; /* Subrayado cuando el usuario pasa el mouse */
 }
+/* Estilos para la barra de paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #00FF00; /* Verde estilo Matrix */
+    border: 1px solid #00FF00;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #00FF00;
+    color: black;
+}
+
+/* Ocultar todas las páginas por defecto */
+.page {
+    display: none;
+}
+
+/* Mostrar la primera página al cargar */
+#page1 {
+    display: block;
+}
