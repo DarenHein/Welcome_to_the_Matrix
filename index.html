@@ -11,8 +11,22 @@
 
     <link rel="stylesheet" href="Styles.css">
 </head>
-
+<script src="script.js"></script>
 <body>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+    ☰
+    </div>
+
+    <nav id="nav-menu" class="hidden">
+        <ul>
+            <li><a href="#Titulo_central">Inicio</a></li>
+            <li><a href="#Abaut">Sobre mí</a></li>
+            <li><a href="#Creacion">Creación del Blog</a></li>
+            <li><a href="#IA">IA</a></li>
+            <li><a href="mailto:welcome_to_the_matrix@hotmail.com">Contacto</a></li>
+        </ul>
+    </nav>
+
     <div class="terminal" id="Titulo_central">
         <h1 class="title"><u>Welcome to the Matrix</u></h1>
         <div class="command-line">
@@ -162,7 +176,7 @@
     </div>
     <footer class="footer">
         <p>Creado por: <span class="nickname">OrangeSkull</span></p>
-        <p>Contacto: <a href="mailto:tu-email@example.com" class="email"></a>Proximamente</p>
+        <p>Contacto: <a href="welcome_to_the_matrix@hotmail.com" class="email"></a>welcome_to_the_matrix@hotmail.com</p>
         <p>Articulo Nuevo : <a href="">Todos los Viernes</a></p> 
         <p>Fecha de creación: Octubre 2024</p>
     </footer>

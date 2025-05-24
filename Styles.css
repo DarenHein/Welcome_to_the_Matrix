@@ -128,3 +128,49 @@ body {
 #page1 {
     display: block;
 }
+
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#nav-menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    border: 1px solid #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu li {
+    margin: 10px 0;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: #0f0;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
