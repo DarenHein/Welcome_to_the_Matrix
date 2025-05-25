@@ -195,6 +195,26 @@ body {
     transition: opacity 0.3s ease;
 }
 
+pre {
+    background-color: #1a1a1a; /* Gris oscuro */
+    color: #00FF00; /* Verde estilo Matrix */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #00FF00;
+    overflow-x: auto;
+    max-width: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 20px;
+}
+
+code {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
 /* Responsive para móviles */
 @media (max-width: 768px) {
     .about-container {
