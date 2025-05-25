@@ -1,104 +1,116 @@
+/* Evita el scroll horizontal y asegura el ancho correcto */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Aplicar la tipografía Matrix */
 body {
     background-color: black;
     color: #00FF00; /* Verde estilo Matrix */
-    font-family: 'Share Tech Mono', monospace; /* Tipografía estilo Matrix */
+    font-family: 'Share Tech Mono', monospace;
     margin: 0;
-    padding: 0; /* Elimina padding extra en el body */
-    height: 100vh; /* Asegura que el body ocupe el 100% de la pantalla */
+    padding: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
-/* Estilo para el encabezado que ocupa toda la pantalla */
+/* Estilo para el encabezado */
 #Titulo_central {
     display: flex;
-    flex-direction: column; /* Organiza el contenido en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; /* Ocupa toda la pantalla */
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    background-color: black; /* Fondo negro */
-    border: none; /* Sin borde */
-    text-align: center; /* Centrar el texto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Estilo para los contenedores tipo terminal */
+/* Contenedores tipo terminal */
 .terminal {
-    border: 2px solid #00FF00; /* Bordes verdes */
+    border: 2px solid #00FF00;
     padding: 20px;
     margin: 20px auto;
+    width: 100%;
     max-width: 800px;
-    background-color: black; /* Fondo negro */
+    background-color: black;
+    box-sizing: border-box;
 }
 
-/* Efecto de texto de comando */
+/* Efecto de texto tipo comando */
 .command-line {
     font-size: 18px;
 }
 
-/* Estilo para el cursor parpadeante */
+/* Cursor parpadeante */
 .blinking-cursor {
     animation: blink 1s steps(1) infinite;
 }
 
-/* Animación para el cursor */
 @keyframes blink {
     50% {
         opacity: 0;
     }
 }
 
-/* Estilo para el título */
+/* Título */
 .title {
-    font-size: 48px; /* Tamaño más grande para el encabezado */
+    font-size: 48px;
     color: #00FF00;
     text-align: center;
 }
 
-/* Contenedor para la sección About */
+/* Contenedor About */
 .about-container {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Centrar texto */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
-/* Estilos para la imagen */
+/* Imagen de About */
 .about-image {
-    border: 2px solid #00FF00; /* Borde verde */
-    width: 150px; /* Ajusta el tamaño según tu imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border: 2px solid #00FF00;
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
 }
 
-/* Estilos para el footer */
+/* Footer */
 .footer {
     background-color: black;
-    border-top: 2px solid #00FF00; /* Borde verde superior */
-    color: #00FF00; /* Texto verde */
+    border-top: 2px solid #00FF00;
+    color: #00FF00;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    font-family: 'Share Tech Mono', monospace; /* Mantiene la tipografía Matrix */
+    font-family: 'Share Tech Mono', monospace;
+    box-sizing: border-box;
 }
 
-/* Estilo para el nickname */
+/* Nickname */
 .nickname {
     font-weight: bold;
 }
 
-/* Estilo para el correo electrónico */
+/* Email */
 .email {
-    color: #00FF00; /* Enlace en color verde */
-    text-decoration: none; /* Sin subrayado en el enlace */
+    color: #00FF00;
+    text-decoration: none;
 }
 
-/* Efecto hover para el correo electrónico */
 .email:hover {
-    text-decoration: underline; /* Subrayado cuando el usuario pasa el mouse */
+    text-decoration: underline;
 }
-/* Estilos para la barra de paginación */
+
+/* Paginación */
 .pagination {
     display: flex;
     justify-content: center;
@@ -109,7 +121,7 @@ body {
     margin: 0 10px;
     padding: 10px 15px;
     text-decoration: none;
-    color: #00FF00; /* Verde estilo Matrix */
+    color: #00FF00;
     border: 1px solid #00FF00;
     transition: background-color 0.3s;
 }
@@ -119,16 +131,16 @@ body {
     color: black;
 }
 
-/* Ocultar todas las páginas por defecto */
+/* Páginas ocultas por defecto */
 .page {
     display: none;
 }
 
-/* Mostrar la primera página al cargar */
 #page1 {
     display: block;
 }
 
+/* Menú hamburguesa */
 .hamburger-menu {
     position: fixed;
     top: 20px;
@@ -140,8 +152,11 @@ body {
     color: #0f0;
     padding: 10px;
     border-radius: 5px;
+    box-sizing: border-box;
+    max-width: calc(100% - 40px);
 }
 
+/* Menú desplegable */
 #nav-menu {
     position: fixed;
     top: 70px;
@@ -151,6 +166,8 @@ body {
     padding: 10px;
     border-radius: 5px;
     z-index: 999;
+    box-sizing: border-box;
+    max-width: calc(100% - 40px);
 }
 
 #nav-menu ul {
@@ -176,4 +193,29 @@ body {
 
 #menu-toggle {
     transition: opacity 0.3s ease;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about-image {
+        margin: 0 auto 20px auto;
+    }
+
+    .terminal {
+        max-width: 95%;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .pagination a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }
