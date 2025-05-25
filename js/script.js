@@ -1,5 +1,3 @@
-let lastScrollTop = 0;
-
 function toggleMenu() {
     const menu = document.getElementById("nav-menu");
     menu.classList.toggle("hidden");
@@ -15,28 +13,22 @@ function toggleMenu() {
     }
 }
 
-// Cerrar el menú si el mouse sale del área del menú
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("nav-menu");
+    const toggleBtn = document.getElementById("menu-toggle");
 
+    // Cerrar el menú si el mouse sale del área del menú
     menu.addEventListener("mouseleave", () => {
         menu.classList.add("hidden");
     });
-});
 
-window.addEventListener("scroll", () => {
-    const toggleBtn = document.getElementById("menu-toggle");
-    let currentScroll = window.scrollY || document.documentElement.scrollTop;
+    // Cerrar el menú si se hace clic fuera del menú y del botón de hamburguesa
+    document.addEventListener("click", (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
 
-    if (currentScroll > lastScrollTop) {
-        // Scroll hacia abajo -> ocultar el botón
-        toggleBtn.style.opacity = "0";
-        toggleBtn.style.pointerEvents = "none";
-    } else {
-        // Scroll hacia arriba -> mostrar el botón
-        toggleBtn.style.opacity = "1";
-        toggleBtn.style.pointerEvents = "auto";
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evitar scroll negativo
+        if (!isClickInsideMenu && !isClickOnToggle) {
+            menu.classList.add("hidden");
+        }
+    });
 });
