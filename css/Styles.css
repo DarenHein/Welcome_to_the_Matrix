@@ -195,6 +195,64 @@ body {
     transition: opacity 0.3s ease;
 }
 
+#nav-menu a:hover {
+    background-color: #00FF00;
+    color: black;
+    border-radius: 4px;
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: #00FF00;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    position: relative; /* Necesario para la línea personalizada */
+}
+
+/* Subrayado verde animado */
+#nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* justo debajo del texto */
+    width: 100%;
+    height: 2px;
+    background-color: #00FF00;
+    transform: scaleX(0); /* Oculto por defecto */
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Mostrar la línea al pasar el mouse */
+#nav-menu a:hover::after {
+    transform: scaleX(1); /* Se extiende la línea */
+}
+
+#nav-menu a {
+    position: relative;
+    text-decoration: none !important;  /* ¡Forzamos quitar la línea predeterminada! */
+    color: #00FF00;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+/* Línea verde personalizada */
+#nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00FF00;
+    transform: scaleX(1); /* Siempre visible */
+    transform-origin: left;
+}
+
+
 pre {
     background-color: #1a1a1a; /* Gris oscuro */
     color: #00FF00; /* Verde estilo Matrix */
@@ -212,6 +270,25 @@ code {
     color: inherit;
     font-family: inherit;
     font-size: 0.95rem;
+}
+
+.matrix-button {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #00FF00;
+    background-color: black;
+    border: 2px solid #00FF00;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.matrix-button:hover {
+    background-color: #00FF00;
+    color: black;
 }
 
 
