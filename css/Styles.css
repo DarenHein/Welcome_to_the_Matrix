@@ -17,6 +17,13 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    color: #00FF00; 
+}
+
+
+
+
 /* Estilo para el encabezado */
 #Titulo_central {
     display: flex;
@@ -290,6 +297,8 @@ code {
     background-color: #00FF00;
     color: black;
 }
+
+
 
 /* === Estilo Consola Retro para el Manifiesto Hacker === */
 
