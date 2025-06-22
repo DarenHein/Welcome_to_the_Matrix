@@ -298,6 +298,22 @@ code {
     color: black;
 }
 
+.terminal-alert {
+    background-color: #111;
+    border: 1px solid #00FF00;
+    color: #00FF00;
+    padding: 10px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    margin: 15px auto;
+    width: fit-content;
+    max-width: 90%;
+    box-shadow: 0 0 5px #00FF00;
+    animation: parpadeo 1s infinite alternate;
+  }
+
+
+
 
 
 /* === Estilo Consola Retro para el Manifiesto Hacker === */
