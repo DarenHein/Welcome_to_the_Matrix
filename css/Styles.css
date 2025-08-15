@@ -313,6 +313,21 @@ code {
   }
 
 
+/* Contenedor de imagen responsive */
+.image-container {
+    width: 100%;
+    max-width: 800px; /* puedes ajustar el máximo */
+    margin: 20px auto;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #00FF00;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
 
 
 
